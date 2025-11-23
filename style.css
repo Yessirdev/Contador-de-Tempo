@@ -1,0 +1,127 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Fundo com gradiente suave */
+    background: linear-gradient(45deg, #1d2b3a, #4a0e97);
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none !important;
+}
+
+/* Estilo dos painéis principais (Glassmorphism) */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+}
+
+/* Grupo de Inputs */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ddd;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #f0f0f0;
+    box-sizing: border-box;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Botões */
+#startButton, #resetButton {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+#startButton:hover, #resetButton:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+}
+
+/* Estilos do Timer */
+.timer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.timer-el {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+}
+
+.timer-el span {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #bbb;
+}
+

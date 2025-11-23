@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- O CSS foi movido para style.css para melhor organização, mas o <style> abaixo ainda funcionaria -->
+    <!-- <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        #setup {
+            background-color: #34495e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+
+        #startButton, #resetButton {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+
+        #startButton:hover, #resetButton:hover {
+            background-color: #d35400;
+        }
+
+        .timer {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .timer-el {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 100px;
+        }
+
+        .big-text {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+        }
+    </style> -->
+</head>
+<body>
+
+    <div class="container" id="setup">
+        <h1>Criar Contagem Regressiva</h1>
+        <div id="setup-container">
+            <div class="input-group">
+                <label for="eventName">Nome do Evento:</label>
+                <input type="text" id="eventName" placeholder="Ex: Meu Aniversário">
+            </div>
+            <div class="input-group">
+                <label for="eventDate">Data do Evento:</label>
+                <input type="date" id="eventDate">
+            </div>
+            <button id="startButton">Iniciar</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="countdown">
+        <h1 id="countdown-title"></h1>
+        <div class="timer">
+            <div class="timer-el">
+                <p class="big-text" id="days">00</p>
+                <span>dias</span>
+            </div>
+            <div class="timer-el">
+                <p class="big-text" id="hours">00</p>
+                <span>horas</span>
+            </div>
+            <div class="timer-el">
+                <p class="big-text" id="minutes">00</p>
+                <span>minutos</span>
+            </div>
+            <div class="timer-el">
+                <p class="big-text" id="seconds">00</p>
+                <span>segundos</span>
+            </div>
+        </div>
+        <button id="resetButton">Reiniciar</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
